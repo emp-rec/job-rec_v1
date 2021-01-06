@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title  %}CS Jobs | Login page{% endblock %}</title>
+</head>
+<body>
+    {% block body %}
+    <div  class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6 mt-5">
+                <div class="card">
+                    <div class="card-header bg-danger text-white text-center">Sign in, avec votre adresse gmail personnel.</div>
+                    <div class="card-body">
+                        <form action="/" method="POST">
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" class="form-control" name="email" placeholder="your_adress_mail@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password:</label>
+                                <input type="password" class="form-control" name="mdp" placeholder="***************" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-outline-danger" name="submit" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <span class="text-danger"><b>NB:</b></span>
+                        <p>Merci de saisir votre adresse mail et mdp correctement pour recevoir l'invitation du deuxiemme session</p>
+                        <br><br>
+                        <p class="text-center">Dev Engineer Intership © Copyright 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
